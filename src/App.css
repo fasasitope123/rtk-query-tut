@@ -1,0 +1,330 @@
+/* For TaskManager component */
+.taskManager > header{
+  padding: 25px 20px;
+  background-color: hsl(210 75% 25%);
+  color: white;
+  font-size: 28px;
+  font-family: cursive;
+}
+
+.taskManager__container {
+  width: 95%;
+  margin: 50px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.taskManager__container > button {
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  background-color: hsl(210 75% 25%);
+  cursor: pointer;
+}
+
+.taskManager__container > button:hover{
+  background-color: hsl(210 75% 30%);
+}
+
+.taskManager__container > button:active{
+  background-color: hsl(210 75% 25%);
+}
+
+.taskManager__tasks{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.isErrorIsLoading{
+  text-align: center;
+ } 
+
+/* For AddTask component */
+.addTask{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  z-index: 100;
+}
+
+.addTask input{
+  height: 40px;
+  border: unset;
+  font-size: 18px;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  border-bottom: 1.5px solid hsl(210, 10%, 75%);
+  padding-left: 5px;
+}
+
+.addTask input:focus{
+  outline: none;
+}
+
+.addTask button {
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: hsl(210 75% 25%);
+}
+
+.addTask textarea {
+  height: 150px;
+  border-color: hsl(210, 10%, 75%);
+  padding: 5px;
+  font-size: 18px;
+}
+
+.addTask textarea:focus { 
+  outline: none;
+}
+
+.addTask button:hover {
+  background-color: hsl(210 75% 30%);
+}
+
+.addTask button:active {
+  background-color: hsl(210 75% 25%);
+}
+
+/* For EditTask component */
+.editTask{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  z-index: 100;
+}
+
+.editTask input{
+  height: 40px;
+  border: unset;
+  font-size: 18px;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  border-bottom: 1.5px solid hsl(210, 10%, 75%);
+  padding-left: 5px;
+}
+
+.editTask input:focus{
+  outline: none;
+}
+
+.editTask button {
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: hsl(210 75% 25%);
+}
+
+.editTask textarea {
+  height: 150px;
+  border-color: hsl(210, 10%, 75%);
+  padding: 5px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.editTask textarea:focus { 
+  outline: none;
+}
+
+.editTask button:hover {
+  background-color: hsl(210 75% 30%);
+}
+
+.editTask button:active {
+  background-color: hsl(210 75% 25%);
+}
+
+/* For Task component */
+.task{
+  width: 100%;
+  padding: 15px 20px;
+  border-left: 4px solid hsl(210, 10%, 75%);
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.task--borderColor{
+  border-color: green;
+  box-shadow: 0 6px 18px -9px hsl(210, 15%, 65%);
+}
+
+.task__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.checkbox-custom {
+  display: none;
+}
+.checkbox-custom-label {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+.checkbox-custom + .checkbox-custom-label:before {
+  content: '';
+  background: inherit;
+  border-radius: 5px;
+  border: 2px solid hsl(210, 15%, 70%);
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px; 
+  height: 12px;
+  padding: 2px; 
+  margin-right: 10px;
+}
+.checkbox-custom:checked + .checkbox-custom-label:after {
+  content: "";
+  padding: 2px;
+  position: absolute;
+  width: 2px;
+  height: 6px;
+  border: solid green;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  top: 2px; left: 5px;
+}
+
+.task__body p{
+  margin: 10px 0 0 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; 
+}
+
+.task__buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.task__buttons > button {
+  background-color: hsl(210 75% 25%);
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  color: white;
+}
+
+.task__buttons > button:hover {
+  background-color: hsl(210 75% 30%);
+}
+
+.task__buttons > button:active{
+  background-color: hsl(210 75% 25%);
+}
+
+.task__deleteNedit button {
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: hsl(210, 10%, 55%);
+}
+
+.task__editButton:hover {
+  color: hsl(210, 20%, 25%);
+}
+
+.task__editButton:active {
+  color: hsl(210, 10%, 55%);
+}
+
+.task__deleteNedit .task__deleteButton {
+  color: hsl(0, 80%, 80%);
+}
+
+.task__deleteButton:hover {
+  color: hsl(0, 70%, 70%);
+}
+
+.task__deleteButton:active {
+  color: hsl(0, 80%, 80%);
+}
+
+/* For Modal component */
+.modalContainer {
+  position: fixed;
+  width: 100vw; 
+  height: 100%;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal{
+  width: 90%;
+  max-width: 500px;
+  border: 5px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  box-sizing: border-box;
+}
+
+.modal__head{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal__close:hover{
+  color: hsl(0, 70%, 70%);
+}
+
+/* For TaskItem component */
+.taskItem{
+  margin-top: 20px;
+}
+
+.taskItem h2{
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.taskItem p{
+  margin-top: 10px;
+  font-size: 18px;
+  max-height: 300px;
+  line-height: 25px;
+  overflow-y: auto;
+  color: hsl(210, 20%, 25%);
+}
+
